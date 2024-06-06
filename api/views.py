@@ -53,3 +53,4 @@ def getNote(request, pk):
   note = Note.objects.get(id = pk)
   serializer = NoteSerializer(note, many=False)
   return Response(serializer.data)
+
