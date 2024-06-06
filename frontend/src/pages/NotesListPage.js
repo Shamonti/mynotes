@@ -14,7 +14,15 @@ const NotesListPage = () => {
     setNotes(data);
   };
 
-  return <div>NotesListPage</div>;
+  return (
+    <div>
+      <div className='notes-list'>
+        {notes.map((note, index) => (
+          <h3 key={index}>{note.body}</h3>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default NotesListPage;
