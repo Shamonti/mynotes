@@ -8,14 +8,13 @@ const NotesPage = ({ match }) => {
   const [note, setNote] = useState(null);
 
   useEffect(() => {
+    const getNote = async () => {
+      let response = await fetch(`/api/notes/${noteId}`);
+      let data = await response.json();
+      setNote(data);
+    };
     getNote();
   }, [noteId]);
-
-  const getNote = async () => {
-    let response = await fetch(`/api/notes/${noteId}`);
-    let data = await response.json();
-    setNote(data);
-  };
 
   let updateNote = async () => {
     fetch(`/api/notes/${noteId}/update/`, {
@@ -25,6 +24,16 @@ const NotesPage = ({ match }) => {
       },
       body: JSON.stringify(note),
     });
+  };
+
+  let deleteNote = async () => {
+    fetch(`/api/notes/${noteId}/delete/`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    navigate('/');
   };
 
   let handleSubmit = () => {
@@ -38,6 +47,7 @@ const NotesPage = ({ match }) => {
         <h3>
           <ArrowLeft onClick={handleSubmit} />
         </h3>
+        <button onClick={deleteNote}>Delete</button>
       </div>
       <textarea
         onClick={e => {
