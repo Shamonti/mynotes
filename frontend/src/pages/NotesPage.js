@@ -55,7 +55,7 @@ const NotesPage = ({ match }) => {
   };
 
   let handleSubmit = () => {
-    console.log('Note:', note);
+    // console.log('Note:', note);
     if (noteId !== 'new' && note.body === '') {
       deleteNote();
     } else if (noteId !== 'new') {
