@@ -21,7 +21,7 @@ const NotesPage = ({ match }) => {
   let updateNote = async () => {
     if (noteId === 'new') return;
 
-    fetch(`/api/notes/${noteId}/update/`, {
+    fetch(`/api/notes/${noteId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -31,17 +31,18 @@ const NotesPage = ({ match }) => {
   };
 
   let createNote = async () => {
-    fetch(`/api/notes/create/`, {
+    fetch(`/api/notes/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(note),
     });
+    navigate('/');
   };
 
   let deleteNote = async () => {
-    fetch(`/api/notes/${noteId}/delete/`, {
+    fetch(`/api/notes/${noteId}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
