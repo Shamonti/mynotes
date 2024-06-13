@@ -7,7 +7,7 @@
 ## Install
 Clone the repository using the command below:
 ```sh
-git clone https://github.com/Shamonti/mynotes.git```
+git clone https://github.com/Shamonti/mynotes.git
 ```
 Move into the directory where we have the project files:
 ```sh
