@@ -14,12 +14,9 @@
 
 👤 **Shamonti**
 
-* Website: shamontihaque.netlify.app
+* Website: [shamontihaque.netlify.app](https://shamontihaque.netlify.app)
 * Github: [@Shamonti](https://github.com/Shamonti)
 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
