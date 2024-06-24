@@ -5,67 +5,70 @@ from .models import Note
 from .serializers import NoteSerializer
 from .utils import updateNote, getNoteDetail, deleteNote, createNote, getNotesList
 
+
 # Create your views here.
-@api_view(['GET'])
+@api_view(["GET"])
 def getRoutes(request):
-  routes = [
+    routes = [
         {
-            'Endpoint': '/notes/',
-            'method': 'GET',
-            'body': None,
-            'description': 'Returns an array of notes'
+            "Endpoint": "/notes/",
+            "method": "GET",
+            "body": None,
+            "description": "Returns an array of notes",
         },
         {
-            'Endpoint': '/notes/id',
-            'method': 'GET',
-            'body': None,
-            'description': 'Returns a single note object'
+            "Endpoint": "/notes/id",
+            "method": "GET",
+            "body": None,
+            "description": "Returns a single note object",
         },
         {
-            'Endpoint': '/notes/create/',
-            'method': 'POST',
-            'body': {'body': ""},
-            'description': 'Creates new note with data sent in post request'
+            "Endpoint": "/notes/create/",
+            "method": "POST",
+            "body": {"body": ""},
+            "description": "Creates new note with data sent in post request",
         },
         {
-            'Endpoint': '/notes/id/update/',
-            'method': 'PUT',
-            'body': {'body': ""},
-            'description': 'Creates an existing note with data sent in post request'
+            "Endpoint": "/notes/id/update/",
+            "method": "PUT",
+            "body": {"body": ""},
+            "description": "Creates an existing note with data sent in post request",
         },
         {
-            'Endpoint': '/notes/id/delete/',
-            'method': 'DELETE',
-            'body': None,
-            'description': 'Deletes and exiting note'
+            "Endpoint": "/notes/id/delete/",
+            "method": "DELETE",
+            "body": None,
+            "description": "Deletes and exiting note",
         },
     ]
 
-  return Response(routes)
+    return Response(routes)
 
-@api_view(['GET', 'POST'])
+
+@api_view(["GET", "POST"])
 def getNotes(request):
-  if request.method == 'GET':
-    return getNotesList(request)
+    if request.method == "GET":
+        return getNotesList(request)
 
-  if request.method == 'POST':
-    return createNote(request)
+    if request.method == "POST":
+        return createNote(request)
 
-@api_view(['GET', 'PUT', 'DELETE'])
+
+@api_view(["GET", "PUT", "DELETE"])
 def getNote(request, pk):
-    if request.method == 'GET':
+    if request.method == "GET":
         return getNoteDetail(request, pk)
 
-    if request.method == 'PUT':
+    if request.method == "PUT":
         return updateNote(request, pk)
-    
-    if request.method == 'DELETE':
+
+    if request.method == "DELETE":
         return deleteNote(request, pk)
 
 
 # @api_view(['POST'])
 # def createNote(request):
-#    data = request.data 
+#    data = request.data
 #    note = Note.objects.create(
 #       body=data['body']
 #    )
@@ -88,4 +91,3 @@ def getNote(request, pk):
 #    note = Note.objects.get(id=pk)
 #    note.delete()
 #    return Response('Note was deleted!')
-
