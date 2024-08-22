@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>api package &mdash; MyNotes 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MyNotes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">api package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-api.admin">api.admin module</a></li>
+<li><a class="reference internal" href="#module-api.apps">api.apps module</a><ul>
+<li><a class="reference internal" href="#api.apps.ApiConfig"><code class="docutils literal notranslate"><span class="pre">ApiConfig</span></code></a><ul>
+<li><a class="reference internal" href="#api.apps.ApiConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">ApiConfig.default_auto_field</span></code></a></li>
+<li><a class="reference internal" href="#api.apps.ApiConfig.name"><code class="docutils literal notranslate"><span class="pre">ApiConfig.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.models">api.models module</a><ul>
+<li><a class="reference internal" href="#api.models.Note"><code class="docutils literal notranslate"><span class="pre">Note</span></code></a><ul>
+<li><a class="reference internal" href="#api.models.Note.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Note.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#api.models.Note.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Note.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#api.models.Note.body"><code class="docutils literal notranslate"><span class="pre">Note.body</span></code></a></li>
+<li><a class="reference internal" href="#api.models.Note.created"><code class="docutils literal notranslate"><span class="pre">Note.created</span></code></a></li>
+<li><a class="reference internal" href="#api.models.Note.get_next_by_created"><code class="docutils literal notranslate"><span class="pre">Note.get_next_by_created()</span></code></a></li>
+<li><a class="reference internal" href="#api.models.Note.get_next_by_updated"><code class="docutils literal notranslate"><span class="pre">Note.get_next_by_updated()</span></code></a></li>
+<li><a class="reference internal" href="#api.models.Note.get_previous_by_created"><code class="docutils literal notranslate"><span class="pre">Note.get_previous_by_created()</span></code></a></li>
+<li><a class="reference internal" href="#api.models.Note.get_previous_by_updated"><code class="docutils literal notranslate"><span class="pre">Note.get_previous_by_updated()</span></code></a></li>
+<li><a class="reference internal" href="#api.models.Note.id"><code class="docutils literal notranslate"><span class="pre">Note.id</span></code></a></li>
+<li><a class="reference internal" href="#api.models.Note.objects"><code class="docutils literal notranslate"><span class="pre">Note.objects</span></code></a></li>
+<li><a class="reference internal" href="#api.models.Note.updated"><code class="docutils literal notranslate"><span class="pre">Note.updated</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.serializers">api.serializers module</a><ul>
+<li><a class="reference internal" href="#api.serializers.NoteSerializer"><code class="docutils literal notranslate"><span class="pre">NoteSerializer</span></code></a><ul>
+<li><a class="reference internal" href="#api.serializers.NoteSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">NoteSerializer.Meta</span></code></a><ul>
+<li><a class="reference internal" href="#api.serializers.NoteSerializer.Meta.fields"><code class="docutils literal notranslate"><span class="pre">NoteSerializer.Meta.fields</span></code></a></li>
+<li><a class="reference internal" href="#api.serializers.NoteSerializer.Meta.model"><code class="docutils literal notranslate"><span class="pre">NoteSerializer.Meta.model</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.tests">api.tests module</a></li>
+<li><a class="reference internal" href="#module-api.urls">api.urls module</a></li>
+<li><a class="reference internal" href="#module-api.utils">api.utils module</a><ul>
+<li><a class="reference internal" href="#api.utils.createNote"><code class="docutils literal notranslate"><span class="pre">createNote()</span></code></a></li>
+<li><a class="reference internal" href="#api.utils.deleteNote"><code class="docutils literal notranslate"><span class="pre">deleteNote()</span></code></a></li>
+<li><a class="reference internal" href="#api.utils.getNoteDetail"><code class="docutils literal notranslate"><span class="pre">getNoteDetail()</span></code></a></li>
+<li><a class="reference internal" href="#api.utils.getNotesList"><code class="docutils literal notranslate"><span class="pre">getNotesList()</span></code></a></li>
+<li><a class="reference internal" href="#api.utils.updateNote"><code class="docutils literal notranslate"><span class="pre">updateNote()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.views">api.views module</a><ul>
+<li><a class="reference internal" href="#api.views.getNote"><code class="docutils literal notranslate"><span class="pre">getNote()</span></code></a></li>
+<li><a class="reference internal" href="#api.views.getNotes"><code class="docutils literal notranslate"><span class="pre">getNotes()</span></code></a></li>
+<li><a class="reference internal" href="#api.views.getRoutes"><code class="docutils literal notranslate"><span class="pre">getRoutes()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MyNotes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">api package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/api.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-package">
+<h1>api package<a class="headerlink" href="#api-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.migrations.html">api.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.migrations.html#module-api.migrations.0001_initial">api.migrations.0001_initial module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.migrations.html#api.migrations.0001_initial.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.migrations.html#api.migrations.0001_initial.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.migrations.html#api.migrations.0001_initial.Migration.initial"><code class="docutils literal notranslate"><span class="pre">Migration.initial</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.migrations.html#api.migrations.0001_initial.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.migrations.html#module-api.migrations.0002_rename_notes_note">api.migrations.0002_rename_notes_note module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.migrations.html#api.migrations.0002_rename_notes_note.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.migrations.html#api.migrations.0002_rename_notes_note.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.migrations.html#api.migrations.0002_rename_notes_note.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.migrations.html#module-api.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-api.admin">
+<span id="api-admin-module"></span><h2>api.admin module<a class="headerlink" href="#module-api.admin" title="Link to this heading"></a></h2>
+</section>
+<section id="module-api.apps">
+<span id="api-apps-module"></span><h2>api.apps module<a class="headerlink" href="#module-api.apps" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="api.apps.ApiConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.apps.</span></span><span class="sig-name descname"><span class="pre">ApiConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/api/apps.html#ApiConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.apps.ApiConfig" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.apps.ApiConfig.default_auto_field">
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#api.apps.ApiConfig.default_auto_field" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.apps.ApiConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'api'</span></em><a class="headerlink" href="#api.apps.ApiConfig.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api.models">
+<span id="api-models-module"></span><h2>api.models module<a class="headerlink" href="#module-api.models" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="api.models.Note">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.models.</span></span><span class="sig-name descname"><span class="pre">Note</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/api/models.html#Note"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.models.Note" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="api.models.Note.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#api.models.Note.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="api.models.Note.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#api.models.Note.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.models.Note.body">
+<span class="sig-name descname"><span class="pre">body</span></span><a class="headerlink" href="#api.models.Note.body" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.models.Note.created">
+<span class="sig-name descname"><span class="pre">created</span></span><a class="headerlink" href="#api.models.Note.created" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="api.models.Note.get_next_by_created">
+<span class="sig-name descname"><span class="pre">get_next_by_created</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.models.Note.get_next_by_created" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="api.models.Note.get_next_by_updated">
+<span class="sig-name descname"><span class="pre">get_next_by_updated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.models.Note.get_next_by_updated" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="api.models.Note.get_previous_by_created">
+<span class="sig-name descname"><span class="pre">get_previous_by_created</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.models.Note.get_previous_by_created" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="api.models.Note.get_previous_by_updated">
+<span class="sig-name descname"><span class="pre">get_previous_by_updated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.models.Note.get_previous_by_updated" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.models.Note.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#api.models.Note.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.models.Note.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#api.models.Note.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.models.Note.updated">
+<span class="sig-name descname"><span class="pre">updated</span></span><a class="headerlink" href="#api.models.Note.updated" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api.serializers">
+<span id="api-serializers-module"></span><h2>api.serializers module<a class="headerlink" href="#module-api.serializers" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="api.serializers.NoteSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.serializers.</span></span><span class="sig-name descname"><span class="pre">NoteSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/api/serializers.html#NoteSerializer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.serializers.NoteSerializer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSerializer</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="api.serializers.NoteSerializer.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="../_modules/api/serializers.html#NoteSerializer.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.serializers.NoteSerializer.Meta" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.serializers.NoteSerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'__all__'</span></em><a class="headerlink" href="#api.serializers.NoteSerializer.Meta.fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.serializers.NoteSerializer.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#api.serializers.NoteSerializer.Meta.model" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#api.models.Note" title="api.models.Note"><code class="xref py py-class docutils literal notranslate"><span class="pre">Note</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api.tests">
+<span id="api-tests-module"></span><h2>api.tests module<a class="headerlink" href="#module-api.tests" title="Link to this heading"></a></h2>
+</section>
+<section id="module-api.urls">
+<span id="api-urls-module"></span><h2>api.urls module<a class="headerlink" href="#module-api.urls" title="Link to this heading"></a></h2>
+</section>
+<section id="module-api.utils">
+<span id="api-utils-module"></span><h2>api.utils module<a class="headerlink" href="#module-api.utils" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="api.utils.createNote">
+<span class="sig-prename descclassname"><span class="pre">api.utils.</span></span><span class="sig-name descname"><span class="pre">createNote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/api/utils.html#createNote"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.utils.createNote" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.utils.deleteNote">
+<span class="sig-prename descclassname"><span class="pre">api.utils.</span></span><span class="sig-name descname"><span class="pre">deleteNote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/api/utils.html#deleteNote"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.utils.deleteNote" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.utils.getNoteDetail">
+<span class="sig-prename descclassname"><span class="pre">api.utils.</span></span><span class="sig-name descname"><span class="pre">getNoteDetail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/api/utils.html#getNoteDetail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.utils.getNoteDetail" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.utils.getNotesList">
+<span class="sig-prename descclassname"><span class="pre">api.utils.</span></span><span class="sig-name descname"><span class="pre">getNotesList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/api/utils.html#getNotesList"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.utils.getNotesList" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.utils.updateNote">
+<span class="sig-prename descclassname"><span class="pre">api.utils.</span></span><span class="sig-name descname"><span class="pre">updateNote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/api/utils.html#updateNote"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.utils.updateNote" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-api.views">
+<span id="api-views-module"></span><h2>api.views module<a class="headerlink" href="#module-api.views" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="api.views.getNote">
+<span class="sig-prename descclassname"><span class="pre">api.views.</span></span><span class="sig-name descname"><span class="pre">getNote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/api/views.html#getNote"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.views.getNote" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.views.getNotes">
+<span class="sig-prename descclassname"><span class="pre">api.views.</span></span><span class="sig-name descname"><span class="pre">getNotes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/api/views.html#getNotes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.views.getNotes" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.views.getRoutes">
+<span class="sig-prename descclassname"><span class="pre">api.views.</span></span><span class="sig-name descname"><span class="pre">getRoutes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/api/views.html#getRoutes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.views.getRoutes" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-api">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-api" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Shamonti.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
